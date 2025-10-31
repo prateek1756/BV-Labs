@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { useLocation } from "wouter";
 import Header from "@/components/Header";
 import Hero from "@/components/Hero";
 import CategorySection from "@/components/CategorySection";
@@ -16,6 +17,7 @@ interface CartItem {
 }
 
 export default function Home() {
+  const [, setLocation] = useLocation();
   const [cartOpen, setCartOpen] = useState(false);
   const [cartItems, setCartItems] = useState<CartItem[]>([]);
 
@@ -57,7 +59,7 @@ export default function Home() {
 
   const handleCheckout = () => {
     console.log('Proceeding to checkout');
-    window.location.href = '/checkout';
+    setLocation('/checkout');
   };
 
   return (
@@ -70,8 +72,8 @@ export default function Home() {
       
       <main className="flex-1">
         <Hero 
-          onBrowseSoftware={() => console.log('Browse software')}
-          onBrowseHardware={() => console.log('Browse hardware')}
+          onBrowseSoftware={() => setLocation('/software')}
+          onBrowseHardware={() => setLocation('/hardware')}
         />
         <CategorySection 
           onCategoryClick={(category) => console.log('Category clicked:', category)}
