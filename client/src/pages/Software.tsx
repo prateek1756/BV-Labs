@@ -2,8 +2,11 @@ import { useState } from "react";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import CartDrawer from "@/components/CartDrawer";
+import AuthDialog from "@/components/AuthDialog";
 import SoftwareCategories from "@/components/SoftwareCategories";
 import ProductCard from "@/components/ProductCard";
+import { useAuth } from "@/hooks/useAuth";
+import { useLocation } from "wouter";
 
 interface CartItem {
   id: string;
@@ -65,10 +68,18 @@ const softwareProducts = [
 ];
 
 export default function Software() {
+  const [, setLocation] = useLocation();
+  const { isAuthenticated } = useAuth();
   const [cartOpen, setCartOpen] = useState(false);
+  const [authDialogOpen, setAuthDialogOpen] = useState(false);
   const [cartItems, setCartItems] = useState<CartItem[]>([]);
 
   const handleAddToCart = (productId: string) => {
+    if (!isAuthenticated) {
+      setAuthDialogOpen(true);
+      return;
+    }
+
     const product = softwareProducts.find(p => p.id === productId);
     if (!product) return;
 
@@ -99,7 +110,7 @@ export default function Software() {
 
   const handleCheckout = () => {
     console.log('Proceeding to checkout');
-    window.location.href = '/checkout';
+    setLocation('/checkout');
   };
 
   return (
@@ -158,6 +169,11 @@ export default function Software() {
         onUpdateQuantity={handleUpdateQuantity}
         onRemoveItem={handleRemoveItem}
         onCheckout={handleCheckout}
+      />
+
+      <AuthDialog
+        isOpen={authDialogOpen}
+        onClose={() => setAuthDialogOpen(false)}
       />
     </div>
   );

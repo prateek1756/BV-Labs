@@ -7,6 +7,8 @@ import FeaturedProducts from "@/components/FeaturedProducts";
 import ValuePropositions from "@/components/ValuePropositions";
 import Footer from "@/components/Footer";
 import CartDrawer from "@/components/CartDrawer";
+import AuthDialog from "@/components/AuthDialog";
+import { useAuth } from "@/hooks/useAuth";
 
 interface CartItem {
   id: string;
@@ -18,10 +20,17 @@ interface CartItem {
 
 export default function Home() {
   const [, setLocation] = useLocation();
+  const { isAuthenticated } = useAuth();
   const [cartOpen, setCartOpen] = useState(false);
+  const [authDialogOpen, setAuthDialogOpen] = useState(false);
   const [cartItems, setCartItems] = useState<CartItem[]>([]);
 
   const handleAddToCart = (productId: string) => {
+    if (!isAuthenticated) {
+      setAuthDialogOpen(true);
+      return;
+    }
+
     const products = {
       "1": { id: "1", name: "Smart Interactive Whiteboard", price: 2499, category: "Classroom Devices" },
       "2": { id: "2", name: "Campus Management ERP", price: 4999, category: "Admin & Management" },
@@ -94,6 +103,11 @@ export default function Home() {
         onUpdateQuantity={handleUpdateQuantity}
         onRemoveItem={handleRemoveItem}
         onCheckout={handleCheckout}
+      />
+
+      <AuthDialog
+        isOpen={authDialogOpen}
+        onClose={() => setAuthDialogOpen(false)}
       />
     </div>
   );
