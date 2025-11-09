@@ -44,7 +44,7 @@ export default function OrderConfirmation({
             <div className="flex justify-between items-center">
               <span className="text-sm text-muted-foreground">Total Amount</span>
               <span className="text-xl font-bold" data-testid="text-order-amount">
-                ${total.toLocaleString()}
+                ₹{total.toLocaleString()}
               </span>
             </div>
           </div>

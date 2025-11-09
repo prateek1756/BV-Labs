@@ -61,6 +61,16 @@ export default function Header({ cartCount = 0, onCartClick, onSearchChange }: H
                 Hardware
               </Button>
             </Link>
+            <Link href="/services">
+              <Button variant="ghost" data-testid="link-services">
+                Services
+              </Button>
+            </Link>
+            <Link href="/training">
+              <Button variant="ghost" data-testid="link-training">
+                Training
+              </Button>
+            </Link>
           </nav>
 
           <div className="hidden md:flex flex-1 max-w-md mx-8">

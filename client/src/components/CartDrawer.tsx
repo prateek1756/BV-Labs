@@ -115,7 +115,7 @@ export default function CartDrawer({
                         </Button>
                       </div>
                       <span className="font-bold" data-testid={`text-item-total-${item.id}`}>
-                        ${(item.price * item.quantity).toLocaleString()}
+                        ₹{(item.price * item.quantity).toLocaleString()}
                       </span>
                     </div>
                   </Card>
@@ -127,7 +127,7 @@ export default function CartDrawer({
               <div className="flex items-center justify-between text-lg">
                 <span className="font-semibold">Total</span>
                 <span className="font-bold text-2xl" data-testid="text-cart-total">
-                  ${total.toLocaleString()}
+                  ₹{total.toLocaleString()}
                 </span>
               </div>
               <Button 

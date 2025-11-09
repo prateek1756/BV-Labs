@@ -7,6 +7,12 @@ import Home from "@/pages/Home";
 import Software from "@/pages/Software";
 import Hardware from "@/pages/Hardware";
 import Checkout from "@/pages/Checkout";
+import About from "@/pages/About";
+import Contact from "@/pages/Contact";
+import Support from "@/pages/Support";
+import Documentation from "@/pages/Documentation";
+import Services from "@/pages/Services";
+import Training from "@/pages/Training";
 import NotFound from "@/pages/not-found";
 
 function Router() {
@@ -16,6 +22,12 @@ function Router() {
       <Route path="/software" component={Software} />
       <Route path="/hardware" component={Hardware} />
       <Route path="/checkout" component={Checkout} />
+      <Route path="/about" component={About} />
+      <Route path="/contact" component={Contact} />
+      <Route path="/support" component={Support} />
+      <Route path="/documentation" component={Documentation} />
+      <Route path="/services" component={Services} />
+      <Route path="/training" component={Training} />
       <Route component={NotFound} />
     </Switch>
   );

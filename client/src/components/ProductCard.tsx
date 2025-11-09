@@ -60,7 +60,7 @@ export default function ProductCard({
       <CardFooter className="p-4 pt-0 flex flex-col gap-3">
         <div className="flex items-center justify-between w-full">
           <span className="text-2xl font-bold" data-testid="text-product-price">
-            ${price.toLocaleString()}
+            ₹{price.toLocaleString()}
           </span>
           {inStock ? (
             <Badge variant="outline" className="text-xs bg-green-50 dark:bg-green-950 text-green-700 dark:text-green-300 border-green-200 dark:border-green-800" data-testid="badge-stock-status">

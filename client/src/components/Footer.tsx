@@ -19,20 +19,20 @@ export default function Footer() {
           <div>
             <h4 className="font-semibold mb-4">Quick Links</h4>
             <ul className="space-y-2 text-sm text-muted-foreground">
-              <li><a href="#" className="hover:text-foreground transition-colors">About Us</a></li>
-              <li><a href="#" className="hover:text-foreground transition-colors">Contact</a></li>
-              <li><a href="#" className="hover:text-foreground transition-colors">Support</a></li>
-              <li><a href="#" className="hover:text-foreground transition-colors">Documentation</a></li>
+              <li><a href="/about" className="hover:text-foreground transition-colors">About Us</a></li>
+              <li><a href="/contact" className="hover:text-foreground transition-colors">Contact</a></li>
+              <li><a href="/support" className="hover:text-foreground transition-colors">Support</a></li>
+              <li><a href="/documentation" className="hover:text-foreground transition-colors">Documentation</a></li>
             </ul>
           </div>
 
           <div>
             <h4 className="font-semibold mb-4">Categories</h4>
             <ul className="space-y-2 text-sm text-muted-foreground">
-              <li><a href="#" className="hover:text-foreground transition-colors">Software</a></li>
-              <li><a href="#" className="hover:text-foreground transition-colors">Hardware</a></li>
-              <li><a href="#" className="hover:text-foreground transition-colors">Services</a></li>
-              <li><a href="#" className="hover:text-foreground transition-colors">Training</a></li>
+              <li><a href="/software" className="hover:text-foreground transition-colors">Software</a></li>
+              <li><a href="/hardware" className="hover:text-foreground transition-colors">Hardware</a></li>
+              <li><a href="/services" className="hover:text-foreground transition-colors">Services</a></li>
+              <li><a href="/training" className="hover:text-foreground transition-colors">Training</a></li>
             </ul>
           </div>
         </div>

@@ -118,17 +118,17 @@ export default function CheckoutForm({ total, onSubmit, onCancel }: CheckoutForm
             <CardContent className="space-y-4">
               <div className="flex justify-between text-sm">
                 <span className="text-muted-foreground">Subtotal</span>
-                <span className="font-medium" data-testid="text-subtotal">${total.toLocaleString()}</span>
+                <span className="font-medium" data-testid="text-subtotal">₹{total.toLocaleString()}</span>
               </div>
               <div className="flex justify-between text-sm">
                 <span className="text-muted-foreground">Tax (Estimated)</span>
-                <span className="font-medium" data-testid="text-tax">${(total * 0.1).toLocaleString()}</span>
+                <span className="font-medium" data-testid="text-tax">₹{(total * 0.1).toLocaleString()}</span>
               </div>
               <div className="border-t pt-4">
                 <div className="flex justify-between items-center">
                   <span className="font-semibold">Total</span>
                   <span className="text-2xl font-bold" data-testid="text-order-total">
-                    ${(total * 1.1).toLocaleString()}
+                    ₹{(total * 1.1).toLocaleString()}
                   </span>
                 </div>
               </div>
