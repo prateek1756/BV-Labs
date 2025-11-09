@@ -56,49 +56,34 @@ A modern, full-stack e-commerce platform designed specifically for educational i
 - **Stripe** - Payment processing
 - **Neon Database** - Serverless PostgreSQL
 
-## 🚀 Deploy to Vercel
+## 🚀 Live Demo
 
-[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https://github.com/prateek1756/BV-Labs)
+Experience EduTech Store in action:
 
-### Environment Variables
+- **Vercel**: [https://edutech-store.vercel.app](https://edutech-store.vercel.app)
+- **Netlify**: [https://edutech-store.netlify.app](https://edutech-store.netlify.app)
 
-Set these in your Vercel dashboard:
+### 🔧 Technology Highlights
 
-```env
-DATABASE_URL="your-postgresql-connection-string"
-REPLIT_AUTH_SECRET="your-auth-secret"
-STRIPE_SECRET_KEY="sk_live_..."
-STRIPE_PUBLISHABLE_KEY="pk_live_..."
-NODE_ENV="production"
-```
+- **Frontend**: React 18 with TypeScript for type-safe development
+- **Styling**: Tailwind CSS with Radix UI for modern, accessible components
+- **State Management**: TanStack Query for efficient server state management
+- **Routing**: Wouter for lightweight client-side routing
+- **Payments**: Stripe integration for secure transactions
+- **Database**: PostgreSQL with Drizzle ORM for type-safe database operations
 
-## 📦 Installation
+## 🎯 About the Project
 
-### Prerequisites
-- Node.js 18+ 
-- npm or yarn
-- PostgreSQL database
+EduTech Store is a comprehensive e-commerce platform specifically designed for educational institutions to streamline their technology procurement process. Built with modern web technologies, it provides a seamless shopping experience for schools, colleges, and universities looking to purchase educational technology solutions.
 
-### Quick Start
+### 🌟 Why EduTech Store?
 
-```bash
-# Clone the repository
-git clone https://github.com/prateek1756/BV-Labs.git
-cd BV-Labs
-
-# Install dependencies
-npm install
-
-# Set up environment variables
-cp .env.example .env
-# Edit .env with your configuration
-
-# Initialize database
-npm run db:push
-
-# Start development server
-npm run dev
-```
+- **Educational Focus**: Unlike generic e-commerce platforms, we understand the unique needs of educational institutions
+- **Bulk Pricing**: Special educational discounts and volume pricing for institutional purchases
+- **Compliance Ready**: Built to meet educational procurement standards and requirements
+- **Modern Technology**: Leverages cutting-edge web technologies for optimal performance and user experience
+- **Secure Payments**: Integrated with Stripe for secure and reliable payment processing
+- **Indian Market**: Prices in Indian Rupees (₹) to serve the Indian educational sector
 
 ## 🏗️ Project Structure
 
