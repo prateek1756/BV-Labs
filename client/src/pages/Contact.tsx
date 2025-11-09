@@ -28,7 +28,7 @@ export default function Contact() {
                       <Mail className="h-8 w-8 text-primary" />
                       <div>
                         <h3 className="font-semibold">Email</h3>
-                        <p className="text-muted-foreground">info@productvault.com</p>
+                        <p className="text-muted-foreground">info@edutechstore.com</p>
                       </div>
                     </div>
                   </CardContent>

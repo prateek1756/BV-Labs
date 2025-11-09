@@ -1,4 +1,4 @@
-# 🎓 ProductVault - Educational Technology E-Commerce Platform
+# 🎓 EduTech Store - Educational Technology E-Commerce Platform
 
 > **Empowering Education Through Technology**
 
@@ -88,7 +88,7 @@ npm run dev
 
 ```env
 # Database
-DATABASE_URL="postgresql://username:password@localhost:5432/productvault"
+DATABASE_URL="postgresql://username:password@localhost:5432/edutech_store"
 
 # Authentication
 REPLIT_AUTH_SECRET="your-auth-secret"
@@ -101,7 +101,7 @@ STRIPE_PUBLISHABLE_KEY="pk_test_..."
 ## 🏗️ Project Structure
 
 ```
-ProductVault/
+EduTech Store/
 ├── client/                 # React frontend
 │   ├── src/
 │   │   ├── components/     # Reusable UI components
@@ -193,7 +193,7 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 ## 📞 Support
 
-- **Email**: info@productvault.com
+- **Email**: info@edutechstore.com
 - **Documentation**: [View Docs](/documentation)
 - **Issues**: [GitHub Issues](https://github.com/prateek1756/BV-Labs/issues)
 
