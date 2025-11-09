@@ -56,6 +56,22 @@ A modern, full-stack e-commerce platform designed specifically for educational i
 - **Stripe** - Payment processing
 - **Neon Database** - Serverless PostgreSQL
 
+## 🚀 Deploy to Vercel
+
+[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https://github.com/prateek1756/BV-Labs)
+
+### Environment Variables
+
+Set these in your Vercel dashboard:
+
+```env
+DATABASE_URL="your-postgresql-connection-string"
+REPLIT_AUTH_SECRET="your-auth-secret"
+STRIPE_SECRET_KEY="sk_live_..."
+STRIPE_PUBLISHABLE_KEY="pk_live_..."
+NODE_ENV="production"
+```
+
 ## 📦 Installation
 
 ### Prerequisites
@@ -84,20 +100,6 @@ npm run db:push
 npm run dev
 ```
 
-### Environment Variables
-
-```env
-# Database
-DATABASE_URL="postgresql://username:password@localhost:5432/edutech_store"
-
-# Authentication
-REPLIT_AUTH_SECRET="your-auth-secret"
-
-# Stripe
-STRIPE_SECRET_KEY="sk_test_..."
-STRIPE_PUBLISHABLE_KEY="pk_test_..."
-```
-
 ## 🏗️ Project Structure
 
 ```
@@ -117,6 +119,7 @@ EduTech Store/
 │   └── index.ts          # Server entry point
 ├── shared/               # Shared types & schemas
 │   └── schema.ts         # Database & validation schemas
+├── vercel.json           # Vercel deployment config
 └── README.md
 ```
 
@@ -127,6 +130,7 @@ EduTech Store/
 npm run dev          # Start development server
 npm run build        # Build for production
 npm run start        # Start production server
+npm run vercel-build # Build for Vercel deployment
 
 # Database
 npm run db:push      # Push schema changes to database
@@ -160,17 +164,17 @@ All prices are displayed in **Indian Rupees (₹)** to serve the Indian educatio
 
 ## 🚀 Deployment
 
-### Production Build
+### Vercel (Recommended)
+1. Fork this repository
+2. Connect to Vercel
+3. Set environment variables
+4. Deploy automatically
+
+### Manual Deployment
 ```bash
 npm run build
 npm run start
 ```
-
-### Environment Setup
-- Configure production database
-- Set up Stripe production keys
-- Configure authentication providers
-- Set up monitoring and logging
 
 ## 🤝 Contributing
 
@@ -203,6 +207,6 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 **Built with ❤️ for Education**
 
-[Live Demo](https://your-demo-url.com) • [Documentation](/documentation) • [Report Bug](https://github.com/prateek1756/BV-Labs/issues)
+[Live Demo](https://edutech-store.vercel.app) • [Documentation](/documentation) • [Report Bug](https://github.com/prateek1756/BV-Labs/issues)
 
 </div>
