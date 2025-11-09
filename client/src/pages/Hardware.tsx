@@ -138,13 +138,18 @@ export default function Hardware() {
       />
       
       <main className="flex-1">
-        <div className="bg-gradient-to-r from-primary/10 to-primary/5 py-16 px-4 sm:px-6 lg:px-8">
-          <div className="max-w-7xl mx-auto text-center">
-            <h1 className="text-4xl md:text-5xl font-bold mb-4" data-testid="text-page-heading">
-              Hardware Solutions
+        <div className="bg-gradient-to-br from-blue-50 via-indigo-50 to-background py-20">
+          <div className="max-w-7xl mx-auto text-center px-4 sm:px-6 lg:px-8">
+            <div className="animate-fade-in-up">
+              <span className="inline-block px-4 py-2 bg-blue-100 text-blue-700 rounded-full text-sm font-medium mb-4">
+                🖥️ Hardware Solutions
+              </span>
+            </div>
+            <h1 className="text-5xl md:text-6xl font-bold mb-6 bg-gradient-to-r from-blue-600 to-indigo-600 bg-clip-text text-transparent animate-fade-in-up" data-testid="text-page-heading" style={{animationDelay: '0.2s'}}>
+              Premium Hardware Equipment
             </h1>
-            <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-              Premium hardware equipment for modern educational environments
+            <p className="text-xl text-muted-foreground max-w-3xl mx-auto leading-relaxed animate-fade-in-up" style={{animationDelay: '0.4s'}}>
+              Transform your educational environment with cutting-edge hardware solutions designed for modern learning
             </p>
           </div>
         </div>
@@ -153,23 +158,24 @@ export default function Hardware() {
           onCategoryClick={(category) => console.log('Category clicked:', category)}
         />
 
-        <section className="py-16 px-4 sm:px-6 lg:px-8 bg-muted/30">
+        <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-b from-background to-muted/20">
           <div className="max-w-7xl mx-auto">
-            <div className="text-center mb-12">
-              <h2 className="text-3xl font-bold mb-4">Featured Hardware Products</h2>
-              <p className="text-muted-foreground max-w-2xl mx-auto">
-                Top-quality hardware trusted by leading educational institutions
+            <div className="text-center mb-16 animate-fade-in-up">
+              <h2 className="text-4xl font-bold mb-6">Featured Hardware Products</h2>
+              <p className="text-xl text-muted-foreground max-w-3xl mx-auto leading-relaxed">
+                Discover top-quality hardware solutions trusted by leading educational institutions worldwide
               </p>
             </div>
 
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-              {hardwareProducts.map((product) => (
-                <ProductCard
-                  key={product.id}
-                  {...product}
-                  onAddToCart={handleAddToCart}
-                  onViewDetails={(id) => setLocation(`/product/${id}`)}
-                />
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+              {hardwareProducts.map((product, index) => (
+                <div key={product.id} className="animate-fade-in-up" style={{animationDelay: `${0.1 * index}s`}}>
+                  <ProductCard
+                    {...product}
+                    onAddToCart={handleAddToCart}
+                    onViewDetails={(id) => setLocation(`/product/${id}`)}
+                  />
+                </div>
               ))}
             </div>
           </div>

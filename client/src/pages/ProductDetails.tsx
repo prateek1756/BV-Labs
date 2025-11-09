@@ -377,14 +377,16 @@ export default function ProductDetails() {
       <Header />
       <main className="flex-1">
         <div className="max-w-6xl mx-auto px-6 py-8">
-          <Link href="/">
-            <Button variant="ghost" className="mb-6">
-              <ArrowLeft className="h-4 w-4 mr-2" />
-              Back to Products
-            </Button>
-          </Link>
+          <div className="animate-fade-in-up">
+            <Link href="/">
+              <Button variant="ghost" className="mb-8 hover:bg-primary/10">
+                <ArrowLeft className="h-4 w-4 mr-2" />
+                Back to Products
+              </Button>
+            </Link>
+          </div>
 
-          <div className="grid lg:grid-cols-2 gap-12">
+          <div className="grid lg:grid-cols-2 gap-12 animate-fade-in-up" style={{animationDelay: '0.2s'}}>
             <div>
               <div className="aspect-square bg-muted rounded-lg flex items-center justify-center mb-6">
                 <div className="text-center text-muted-foreground">
