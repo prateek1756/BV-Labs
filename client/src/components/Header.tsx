@@ -45,27 +45,21 @@ export default function Header({ cartCount = 0, onCartClick, onSearchChange }: H
     <header className="sticky top-0 z-50 bg-background border-b">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16 gap-4">
-          <Link href="/">
-            <a className="flex items-center gap-2 hover-elevate active-elevate-2 rounded-md px-2 -ml-2 py-1" data-testid="link-home">
-              <GraduationCap className="h-8 w-8 text-primary" data-testid="icon-logo" />
-              <span className="text-xl font-bold" data-testid="text-brand">EduTech Store</span>
-            </a>
+          <Link href="/" className="flex items-center gap-2 hover-elevate active-elevate-2 rounded-md px-2 -ml-2 py-1" data-testid="link-home">
+            <GraduationCap className="h-8 w-8 text-primary" data-testid="icon-logo" />
+            <span className="text-xl font-bold" data-testid="text-brand">EduTech Store</span>
           </Link>
 
           <nav className="hidden md:flex items-center gap-1">
             <Link href="/software">
-              <a>
-                <Button variant="ghost" data-testid="link-software">
-                  Software
-                </Button>
-              </a>
+              <Button variant="ghost" data-testid="link-software">
+                Software
+              </Button>
             </Link>
             <Link href="/hardware">
-              <a>
-                <Button variant="ghost" data-testid="link-hardware">
-                  Hardware
-                </Button>
-              </a>
+              <Button variant="ghost" data-testid="link-hardware">
+                Hardware
+              </Button>
             </Link>
           </nav>
 
