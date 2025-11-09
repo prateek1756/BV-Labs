@@ -55,6 +55,10 @@ export default function Home() {
     console.log('Added to cart:', productId);
   };
 
+  const handleViewDetails = (id: string) => {
+    setLocation(`/product/${id}`);
+  };
+
   const handleUpdateQuantity = (id: string, quantity: number) => {
     if (quantity < 1) return;
     setCartItems(cartItems.map(item =>
@@ -89,7 +93,7 @@ export default function Home() {
         />
         <FeaturedProducts 
           onAddToCart={handleAddToCart}
-          onViewDetails={(id) => console.log('View details:', id)}
+          onViewDetails={handleViewDetails}
         />
         <ValuePropositions />
       </main>

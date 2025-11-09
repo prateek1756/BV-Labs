@@ -7,6 +7,9 @@ import Home from "@/pages/Home";
 import Software from "@/pages/Software";
 import Hardware from "@/pages/Hardware";
 import Checkout from "@/pages/Checkout";
+import ProductDetails from "@/pages/ProductDetails";
+import Login from "@/pages/Login";
+import Signup from "@/pages/Signup";
 import About from "@/pages/About";
 import Contact from "@/pages/Contact";
 import Support from "@/pages/Support";
@@ -22,6 +25,9 @@ function Router() {
       <Route path="/software" component={Software} />
       <Route path="/hardware" component={Hardware} />
       <Route path="/checkout" component={Checkout} />
+      <Route path="/product/:id" component={ProductDetails} />
+      <Route path="/login" component={Login} />
+      <Route path="/signup" component={Signup} />
       <Route path="/about" component={About} />
       <Route path="/contact" component={Contact} />
       <Route path="/support" component={Support} />

@@ -152,7 +152,7 @@ export default function Software() {
                   key={product.id}
                   {...product}
                   onAddToCart={handleAddToCart}
-                  onViewDetails={(id) => console.log('View details:', id)}
+                  onViewDetails={(id) => setLocation(`/product/${id}`)}
                 />
               ))}
             </div>

@@ -88,9 +88,9 @@ export default function Header({ cartCount = 0, onCartClick, onSearchChange }: H
 
           <div className="flex items-center gap-2">
             <Button
-              variant="ghost"
+              variant="outline"
               size="icon"
-              className="relative"
+              className="relative hover:bg-primary hover:text-primary-foreground border-primary/20"
               onClick={onCartClick}
               data-testid="button-cart"
             >
@@ -128,9 +128,11 @@ export default function Header({ cartCount = 0, onCartClick, onSearchChange }: H
                 </DropdownMenuContent>
               </DropdownMenu>
             ) : (
-              <Button variant="ghost" onClick={handleLogin} data-testid="button-login">
-                Sign In
-              </Button>
+              <Link href="/login">
+                <Button className="bg-primary text-primary-foreground hover:bg-primary/90" data-testid="button-login">
+                  Sign In/Sign Up
+                </Button>
+              </Link>
             )}
           </div>
         </div>
