@@ -16,6 +16,10 @@ import Support from "@/pages/Support";
 import Documentation from "@/pages/Documentation";
 import Services from "@/pages/Services";
 import Training from "@/pages/Training";
+import GetQuote from "@/pages/GetQuote";
+import ScheduleInstallation from "@/pages/ScheduleInstallation";
+import ExploreServices from "@/pages/ExploreServices";
+import BookConsultation from "@/pages/BookConsultation";
 import NotFound from "@/pages/not-found";
 
 function Router() {
@@ -34,6 +38,10 @@ function Router() {
       <Route path="/documentation" component={Documentation} />
       <Route path="/services" component={Services} />
       <Route path="/training" component={Training} />
+      <Route path="/get-quote" component={GetQuote} />
+      <Route path="/schedule-installation" component={ScheduleInstallation} />
+      <Route path="/explore-services" component={ExploreServices} />
+      <Route path="/book-consultation" component={BookConsultation} />
       <Route component={NotFound} />
     </Switch>
   );
