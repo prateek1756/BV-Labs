@@ -181,7 +181,11 @@ export default function Services() {
                       <Star className="h-4 w-4 text-yellow-500 fill-current" />
                       <span className="text-sm text-muted-foreground">99.9% uptime guarantee</span>
                     </div>
-                    <Button variant="outline" className="w-full border-blue-200 text-blue-600 hover:bg-blue-50">
+                    <Button 
+                      variant="outline" 
+                      className="w-full border-blue-200 text-blue-600 hover:bg-blue-50"
+                      onClick={() => setLocation('/maintenance-support')}
+                    >
                       Learn More
                     </Button>
                   </CardContent>
