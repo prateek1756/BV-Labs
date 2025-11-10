@@ -7,6 +7,7 @@ import {
 } from "@/components/ui/dialog";
 import { Button } from "@/components/ui/button";
 import { GraduationCap, LogIn } from "lucide-react";
+import { useLocation } from "wouter";
 
 interface AuthDialogProps {
   isOpen: boolean;
@@ -14,8 +15,11 @@ interface AuthDialogProps {
 }
 
 export default function AuthDialog({ isOpen, onClose }: AuthDialogProps) {
+  const [, setLocation] = useLocation();
+
   const handleLogin = () => {
-    window.location.href = "/api/login";
+    onClose();
+    setLocation("/login");
   };
 
   return (
